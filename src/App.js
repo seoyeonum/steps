@@ -23,14 +23,17 @@ export default function App() {
     // alert('Previous');
 
     // 2. setStep 함수를 괄호 안에 정의
-    if (step > 1) setStep(step - 1);
+    if (step > 1) setStep((s) => s - 1);
   }
 
   function handleNext() {
     // alert('Next');
 
     // 2. setStep 함수를 괄호 안에 정의
-    if (step < 3) setStep(step + 1);
+    if (step < 3) {
+      setStep((s) => s + 1);
+      // setStep((s) => s + 1);
+    }
 
     // step = step + 1; 의 식으로 직접 정의할 경우, error 가 발생하지 않지만 작동이 정상적으로 이루어지지 않는다.
     // → React 는 해당 변수가 State 변수인지 알 수 없기 때문!
@@ -48,7 +51,7 @@ export default function App() {
 
   return (
     <>
-      <button className="close" onClick={() => setIsOpen(!isOpen)}>
+      <button className="close" onClick={() => setIsOpen((is) => !is)}>
         &times;
       </button>
       {isOpen && (

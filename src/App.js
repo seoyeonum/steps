@@ -1,5 +1,15 @@
 import { useState } from 'react';
 
+/*
+※ Practical Guidelines about state
+- 추적해야하는 데이터가 있는 경우 (Vanilla JS 에서 let 에 해당하는 경우)
+- 데이터가 동적으로 변화해야 하는 경우 (be dynamic)
+- component가 표시되는 모습을 변화기키고 싶을 때 (주로 event handler function 이용)
+
+- component를 만들 때, state의 변화를 반영한 모습을 상상해야 한다.
+- 모든 변수에 state를 사용할 이유는 없다. 불필요하게 렌더링을 만들지 말자.
+*/
+
 const messages = [
   'Learn React ⚛️',
   'Apply for jobs 💼',
